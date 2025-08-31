@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone Simples</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo" onclick="logoClickEffect()">▶ <span>YouTube</span></div>
+    <input type="text" class="search" placeholder="Pesquisar" />
+    <div class="user-actions"><span class="material-icons">account_circle</span></div>
+  </header>
+
+  <aside class="sidebar">
+  <!-- Seção principal -->
+  <button class="nav-btn"><span class="material-icons">home</span> Início</button>
+  <button class="nav-btn"><span class="material-icons">play_arrow</span> Shorts</button>
+  <button class="nav-btn"><span class="material-icons">subscriptions</span> Inscrições</button>
+  <button class="nav-btn"><span class="material-icons">video_library</span> Biblioteca</button>
+
+  <hr />
+
+  <!-- Explorar -->
+  <button class="nav-btn"><span class="material-icons">explore</span> Explorar</button>
+  <button class="nav-btn"><span class="material-icons">shopping_bag</span> Shopping</button>
+  <button class="nav-btn"><span class="material-icons">music_note</span> Música</button>
+  <button class="nav-btn"><span class="material-icons">local_movies</span> Filmes</button>
+  <button class="nav-btn"><span class="material-icons">sensors</span> Ao vivo</button>
+  <button class="nav-btn"><span class="material-icons">sports_esports</span> Jogos</button>
+  <button class="nav-btn"><span class="material-icons">article</span> Notícias</button>
+  <button class="nav-btn"><span class="material-icons">sports_soccer</span> Esportes</button>
+  <button class="nav-btn"><span class="material-icons">school</span> Cursos</button>
+  <button class="nav-btn"><span class="material-icons">podcasts</span> Podcasts</button>
+
+  <hr />
+
+  <!-- Mais do YouTube -->
+  <button class="nav-btn"><span class="material-icons">workspace_premium</span> YouTube Premium</button>
+  <button class="nav-btn"><span class="material-icons">music_video</span> YouTube Music</button>
+  <button class="nav-btn"><span class="material-icons">child_friendly</span> YouTube Kids</button>
+
+  <hr />
+
+  <!-- Outros -->
+  <button class="nav-btn"><span class="material-icons">settings</span> Configurações</button>
+  <button class="nav-btn"><span class="material-icons">flag</span> Histórico de denúncias</button>
+  <button class="nav-btn"><span class="material-icons">help</span> Ajuda</button>
+  <button class="nav-btn"><span class="material-icons">feedback</span> Enviar feedback</button>
+</aside>
+
+
+<div class="tags-container">
+  <button class="tags-arrow left" onclick="scrollTags('left')">
+    <span class="material-icons">chevron_left</span>
+  </button>
+
+  <div class="tags-bar" id="tagsBar">
+    <button class="tag active">Tudo</button>
+    <button class="tag">Música</button>
+    <button class="tag">Mixes</button>
+    <button class="tag">Dr. Dre</button>
+    <button class="tag">Anos 2000</button>
+    <button class="tag">Lista de reprodução</button>
+    <button class="tag">Hip Hop Soul</button>
+    <button class="tag">Música sertaneja</button>
+    <button class="tag">Reggae</button>
+    <button class="tag">Dilsinho</button>
+    <button class="tag">Samba</button>
+    <button class="tag">Ao vivo</button>
+    <button class="tag">Eletropop</button>
+    <button class="tag">Música indie</button>
+    <button class="tag">Enviados recentemente</button>
+    <button class="tag">Assistidos</button>
+    <button class="tag">Novidades para você</button>
+  </div>
+
+  <button class="tags-arrow right" onclick="scrollTags('right')">
+    <span class="material-icons">chevron_right</span>
+  </button>
+</div>
+
+
+  <main class="content">
+    <div class="video-card">
+      <img src="images/video1.gif" data-gif="img/video1.gif" alt="Vídeo 1" class="video-thumb">
+      <p>BOB ESPONJA</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video2.gif" data-gif="img/video1.gif" alt="Vídeo 2" class="video-thumb">
+      <p>MUSIC</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video3.gif" data-gif="img/video1.gif" alt="Vídeo 3" class="video-thumb">
+      <p>MARIAH CAREY</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video5.gif" data-gif="img/video1.gif" alt="Vídeo 4" class="video-thumb">
+      <p>AURORA BOREAL</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video6.gif" data-gif="img/video1.gif" alt="Vídeo 5" class="video-thumb">
+      <p>FLOWERS</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video7.gif" data-gif="img/video1.gif" alt="Vídeo 6" class="video-thumb">
+      <p>YUYU HAKUSHO</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video4.gif" data-gif="img/video1.gif" alt="Vídeo 7" class="video-thumb">
+      <p>HORA DE AVENTURA</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video8.gif" data-gif="img/video1.gif" alt="Vídeo 8" class="video-thumb">
+      <p>BLACK EYED PEAS</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video9.gif" data-gif="img/video1.gif" alt="Vídeo 8" class="video-thumb">
+      <p>TRIPLE BOMBOM</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video10.gif" data-gif="img/video1.gif" alt="Vídeo 10" class="video-thumb">
+      <p>CALMA GORDINHO</p>
+    </div>
+    <div class="video-card">
+      <img src="images/video11.gif" data-gif="img/video1.gif" alt="Vídeo 11" class="video-thumb">
+      <p>TRETA!</p>
+    </div>
+     <div class="video-card">
+      <img src="images/video12.gif" data-gif="img/video1.gif" alt="Vídeo 12" class="video-thumb">
+      <p>TRETA!</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

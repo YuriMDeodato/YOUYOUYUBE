@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212121;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px 12px;
+  border-radius: 2px;
+  border: none;
+  background-color: #121212;
+  color: white;
+}
+
+.user-actions {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50px; /* altura do header/topbar */
+  left: 0;
+  width: 200px;
+  bottom: 0;
+  background-color: #202020;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  z-index: 999;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #383838;
+}
+
+.material-icons {
+  font-size: 22px;
+}
+
+.tags-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #0f0f0f;
+  padding: 10px 0;
+  margin-left: 220px;
+  overflow: hidden;
+}
+
+.tags-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 40px; /* espaço lateral para setas */
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.tags-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.tag {
+  background-color: #272727;
+  border: 1px solid #444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.tag:hover {
+  background-color: #3d3d3d;
+}
+
+.tag.active {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.tags-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0f0f0f;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+
+.tags-arrow:hover {
+  background-color: #1a1a1a;
+}
+
+.tags-arrow.left {
+  left: 0;
+}
+
+.tags-arrow.right {
+  right: 0;
+}
+
+
+.tag {
+  background-color: #272727;
+  border: 1px solid #444;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background-color: #3d3d3d;
+}
+
+.tag.active {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background-color: #181818;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-card img {
+  width: 100%;
+  display: block;
+}
+
+.video-card p {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.logo:hover {
+  color: #ff0000;
+  transform: scale(1.05) rotate(-1deg);
+  text-shadow: 0 0 10px #ff0000aa;
+}
+
+.logo span {
+  transition: text-shadow 0.3s ease;
+}
+
+.logo.clicked span {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 0px #fff;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 12px #ff0000, 0 0 24px #ff0000;
+    transform: scale(1.1);
+  }
+  100% {
+    text-shadow: 0 0 0px #fff;
+    transform: scale(1);
+  }
+}
